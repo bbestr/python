@@ -1,4 +1,6 @@
-card_list = [{"name":"uzi","phone":"123456789","qq":"1234568","email":"123@qq.com"}]
+card_list = [{"name": "uzi", "phone": "123456789", "qq": "1234568", "email": "123@qq.com"}]
+
+
 def show_menu():
     """菜单显示"""
     print("*" * 50)
@@ -8,6 +10,8 @@ def show_menu():
     print("3.查询名片 [3]")
     print("4.退出系统 [0]")
     print("*" * 50)
+
+
 def new_card():
     """新建card"""
     name = input("请输入姓名:")
@@ -15,11 +19,13 @@ def new_card():
     qq = input("请输入qq:")
     email = input("请输入邮箱")
 
-    card_dict = {"name":name,"phone":phone,"qq":qq,"email":email}
+    card_dict = {"name": name, "phone": phone, "qq": qq, "email": email}
 
     card_list.append(card_dict)
 
     print("新建名片成功!\t\n")
+
+
 def all_card():
     """显示全部card"""
 
@@ -28,12 +34,14 @@ def all_card():
     else:
         print("=" * 50)
         print("显示所有名片")
-        for mn in ["姓名","电话","qq","邮箱"]:
-            print(mn,end="\t\t\t\t")
+        for mn in ["姓名", "电话", "qq", "邮箱"]:
+            print(mn, end="\t\t\t\t")
         print("")
         for io in card_list:
-            print("%s\t\t\t\ty%s\t\t\t\t%s\t\t\t\t%s" % (io["name"],io["phone"],io["qq"],io["email"]))
+            print("%s\t\t\t\ty%s\t\t\t\t%s\t\t\t\t%s" % (io["name"], io["phone"], io["qq"], io["email"]))
         print("=" * 50)
+
+
 def card_select():
     """查询card"""
     i1 = input("请输入查询信息(姓名):")
@@ -51,11 +59,13 @@ def card_select():
             break
     else:
         print("抱歉 没有你想要的信息\n")
+
+
 def deal_card(tempdict):
     """修改名片"""
     while True:
         action = int(input("输入你想要的进行的操作 修改 [1]; 删除 [2] 返回主页 [3]:"))
-        if action in [1,2,3]:
+        if action in [1, 2, 3]:
             if action == 1:
                 tempdict["name"] = input("姓名:")
                 tempdict["phone"] = input("电话:")
