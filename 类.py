@@ -1,9 +1,9 @@
 class Cat:
+
+    def __init__(self,name):
+        self.name = name
     def eat(self):
         print("%s吃饭中" %self.name)
-    def drink(self):
+    @staticmethod
+    def drink():
         print("喝水中")
-tom = Cat()
-tom.name = "加菲猫"
-tom.eat()
-tom.drink()
