@@ -1,4 +1,4 @@
-import 类
+from 基础 import 类
 
 ai = 类.Cat("皮蛋")
 
