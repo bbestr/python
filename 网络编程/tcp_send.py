@@ -4,6 +4,7 @@ def main():
     #建立socket
     tcp_scoket = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
     #建立连接
+
     tcp_scoket.connect(("192.168.31.241",7890))
     #姐发消息
     while True:
