@@ -27,7 +27,7 @@ class Translate:
     def get_result(self):
         self.result = json.loads(self.r.content.decode())
         self.recv = self.result["trans"][0]["dst"]
-        print("翻译结果 %s" % self.recv)
+        print("翻译结果:",self.recv)
 
 
     def run(self):

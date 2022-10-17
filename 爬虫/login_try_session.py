@@ -1,4 +1,5 @@
-import  requests
+# coding=utf-8
+import requests
 import json
 session = requests.session()
 
@@ -12,5 +13,6 @@ session.post(post_url,data=post_data,headers=header)
 
 respose = session.get("https://mail.qq.com/cgi-bin/frame_html",headers=header)
 
-print(respose.content)
+r = json.load(respose.content.decode())
+print(r)
 
