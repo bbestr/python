@@ -18,7 +18,7 @@ post_url = "https://fanyi.baidu.com/basetrans"
 
 r = requests.post(post_url, data=data, headers=header)
 
-print(r.content.decode())
+
 dict = json.loads(r.content.decode())
 recv = dict["trans"][0]["dst"]
 print("翻译结果:%s" % recv)
