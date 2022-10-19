@@ -13,6 +13,7 @@ class BaiduFanyi:
     def parse_url(self,url,data):
         respose = requests.post(url,data=data,headers=self.headers)
         hh = json.loads(respose.content.decode())
+
         return hh
 
     def run(self):

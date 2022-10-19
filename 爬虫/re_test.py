@@ -1,4 +1,8 @@
 import re
-pattern = re.compile(ur'";window.gtk = ('.*?');"')
-str = u''
-print(pattern.search(str))
+
+
+
+ret = re.findall("a[abc]+a","abcahca*cawdaojdc")
+
+print(ret)
+
